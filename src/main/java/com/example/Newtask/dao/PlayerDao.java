@@ -13,11 +13,11 @@ public class PlayerDao {
 	ArrayList<Player> listOfPlayer = new ArrayList<Player>();
 
 	public PlayerDao() {
-		listOfPlayer.add(new Player(101, "Player1", 1, "PuneCoach"));
-		listOfPlayer.add(new Player(102, "Player2", 2, "MumbaiCoach"));
-		listOfPlayer.add(new Player(103, "Player3", 3, "BangCoach"));
-		listOfPlayer.add(new Player(104, "Player4", 4, "MhCoach"));
-		listOfPlayer.add(new Player(105, "Player5", 5, "MpCoach"));
+		listOfPlayer.add(new Player(101, "PD", 1, "Bowler"));
+		listOfPlayer.add(new Player(102, "Ravi", 2, "Batsman"));
+		listOfPlayer.add(new Player(103, "Yash", 3, "Umpire"));
+		listOfPlayer.add(new Player(104, "Jatin", 4, "HeadCoach"));
+		listOfPlayer.add(new Player(105, "Sachin", 5, "Plsyer"));
 	}
 
 	// posting method or adding/inserting data

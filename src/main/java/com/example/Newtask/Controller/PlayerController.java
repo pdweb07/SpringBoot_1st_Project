@@ -33,7 +33,7 @@ public class PlayerController {
 	}
 
 	// getting all Player data
-	@GetMapping("/api/Player")
+	@GetMapping("/api/player")
 	public List<Player> getAllPlayers() {
 		return playerService.getAllplayers(); // Fetch all Players
 	}
@@ -55,7 +55,7 @@ public class PlayerController {
 
 	@DeleteMapping("/api/deletePlayer/{PlayerId}")
 	public String deletePlayer(@PathVariable int PlayerId) {
-		return playerService.deleteplayer(PlayerId);
+		return playerService.deletePlayer(PlayerId);
 	}
 
 	@PutMapping("/api/PlayerUpdate/{PlayerId}")

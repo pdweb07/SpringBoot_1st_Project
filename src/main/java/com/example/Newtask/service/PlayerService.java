@@ -31,7 +31,7 @@ public class PlayerService {
 	}
 	
 	//delete
-	public String deleteplayer(int playerId)
+	public String deletePlayer(int playerId)
 	{
 		return playerDao.deletePlayerById(playerId);
 	}

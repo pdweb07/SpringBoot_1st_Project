@@ -69,19 +69,8 @@ public class Player {
 		this.age = age;
 	}
 
-	/**
-	 * @return the playerId
-	 */
-	public int getplayerId() {
-		return playerId;
-	}
+	
 
-	/**
-	 * @param playerId the playerId to set
-	 */
-	public void setplayerId(int playerId) {
-		this.playerId = playerId;
-	}
 
 	/**
 	 * @return the playerRole
