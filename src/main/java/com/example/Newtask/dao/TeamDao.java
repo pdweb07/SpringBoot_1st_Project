@@ -20,13 +20,6 @@ public class TeamDao {
 		listOfTeam.add(new Team(105, "team5", "MP", "MpCoach"));
 	}
 
-	// posting method or adding/inserting data
-	public String addteam(Team team) {
-		listOfTeam.add(team);
-
-		return "Response Added Successfully";
-	}
-
 	// get all team data
 	public List<Team> getAllTeams() {
 		return listOfTeam;
@@ -40,6 +33,13 @@ public class TeamDao {
 			}
 		}
 		return null;
+	}
+
+	// posting method or adding/inserting data
+	public String addteam(Team team) {
+		listOfTeam.add(team);
+
+		return "Response Added Successfully";
 	}
 
 	// delete

@@ -17,20 +17,11 @@ import com.example.Newtask.model.Team;
 import com.example.Newtask.service.TeamService;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
 @RestController
 public class TeamController {
 
 	@Autowired
 	TeamService teamService;
-
-	@PostMapping("/api/teams")
-	public String addTeam(@RequestBody Team team) {
-//		System.out.println(team);
-
-		String msg = teamService.addTeam(team);
-		return msg;
-	}
 
 	// getting all team data
 	@GetMapping("/api/team")
@@ -53,12 +44,21 @@ public class TeamController {
 		}
 	}
 
+	@PostMapping("/api/teams")
+	public String addTeam(@RequestBody Team team) {
+//		System.out.println(team);
+
+		String msg = teamService.addTeam(team);
+		return msg;
+	}
+
 	@DeleteMapping("/api/deleteTeam/{teamId}")
 	public String deleteTeam(@PathVariable int teamId) {
 		return teamService.deleteTeam(teamId);
 	}
+
 	@PutMapping("/api/teamUpdate/{teamId}")
-	public String updateTeam(@RequestBody Team team,@PathVariable int teamId) {
+	public String updateTeam(@RequestBody Team team, @PathVariable int teamId) {
 		String msg = teamService.updateTeam(teamId, team);
 		return msg;
 	}

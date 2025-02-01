@@ -14,12 +14,6 @@ public class TeamService {
 	@Autowired
 	TeamDao teamDao;
 
-	public String addTeam(Team team) {
-		String msg = teamDao.addteam(team);
-
-		return msg;
-	}
-
 	// getting all data
 	public List<Team> getAllTeams() {
 		return teamDao.getAllTeams(); // Fetch all teams from TeamDao
@@ -29,19 +23,25 @@ public class TeamService {
 	public Team getTeamById(int teamId) {
 		return teamDao.getTeamById(teamId); // Fetch team by ID
 	}
-	
-	//delete
-	public String deleteTeam(int teamId)
-	{
+
+	// Adding the data using post in request body
+	public String addTeam(Team team) {
+		String msg = teamDao.addteam(team);
+
+		return msg;
+	}
+
+	// delete
+	public String deleteTeam(int teamId) {
 		return teamDao.deleteTeamById(teamId);
 	}
-	
-	//update team
-	public String updateTeam(int teamId,Team team) {
+
+	// update team
+	public String updateTeam(int teamId, Team team) {
 		String msg = teamDao.updateTeam(teamId, team);
-		if(msg.equals("Team updated")) {
+		if (msg.equals("Team updated")) {
 			return "Team updated";
-		}else {
+		} else {
 			return "Team not found to update";
 		}
 	}
